@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>متجر نجوم النشاط ⭐</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- ملف التنسيق -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==================================================
+         1. الصفحة الرئيسية
+    =================================================== -->
+
+    <section id="welcomePage" class="page active">
+
+        <div class="welcome-card">
+
+            <div class="logo-star">⭐</div>
+
+            <h1>متجر نجوم النشاط</h1>
+
+            <p class="subtitle">
+                لأن كل إنجاز يستحق مكافأة 💗
+            </p>
+
+            <button id="startBtn" class="main-btn">
+                اختاري هديتك 🎁
+            </button>
+
+        </div>
+
+        <button id="openAdminLogin" class="admin-small-btn">
+            دخول المشرفة
+        </button>
+
+    </section>
+
+
+    <!-- ==================================================
+         2. صفحة بيانات الطالبة
+    =================================================== -->
+
+    <section id="studentPage" class="page">
+
+        <div class="form-card">
+
+            <div class="small-star">⭐</div>
+
+            <h2>أهلًا بنجمتنا 💗</h2>
+
+            <p>
+                قبل ما تختارين هديتك، عرفينا عليكِ
+            </p>
+
+
+            <!-- اسم الطالبة -->
+
+            <div class="input-group">
+
+                <label for="studentName">
+                    اسم الطالبة
+                </label>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="اكتبي اسمك الكامل"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <!-- الفصل -->
+
+            <div class="input-group">
+
+                <label for="studentClass">
+                    الفصل / الشعبة
+                </label>
+
+                <input
+                    type="text"
+                    id="studentClass"
+                    placeholder="مثال: 2/أ"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <p id="studentError" class="error-message"></p>
+
+
+            <button id="goToStoreBtn" class="main-btn">
+                يلا أختار هديتي ✨
+            </button>
+
+
+            <button class="back-btn" data-page="welcomePage">
+                رجوع
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         3. متجر الهدايا
+    =================================================== -->
+
+    <section id="storePage" class="page">
+
+        <header class="store-header">
+
+            <span class="header-star">⭐</span>
+
+            <div>
+                <h1>متجر نجوم النشاط</h1>
+                <p>
+                    اختاري حافزك المفضل 💗
+                </p>
+            </div>
+
+        </header>
+
+
+        <div class="student-welcome">
+
+            أهلًا
+            <strong id="displayStudentName"></strong>
+            ✨
+
+            <br>
+
+            <span>
+                تستحقين مكافأتك!
+            </span>
+
+        </div>
+
+
+        <!-- شبكة الهدايا -->
+
+        <div class="gifts-grid">
+
+
+            <!-- هدية 1 -->
+
+            <article
+                class="gift-card"
+                data-gift="سناك على ذوقك"
+                data-icon="🍫"
+            >
+
+                <div class="gift-icon">🍫</div>
+
+                <h3>سناك على ذوقك</h3>
+
+                <p>
+                    شوكولاتة أو سناك من اختيارك
+                </p>
+
+                <button class="choose-gift-btn">
+                    أختارها 💗
+                </button>
+
+            </article>
+
+
+            <!-- هدية 2 -->
+
+            <article
+                class="gift-card"
+                data-gift="كوبون مشروب"
+                data-icon="🥤"
+            >
+
+                <div class="gift-icon">🥤</div>
+
+                <h3>كوبون مشروب</h3>
+
+                <p>
+                    استمتعي بمشروبك المفضل
+                </p>
+
+                <button class="choose-gift-btn">
+                    أختارها 💗
+                </button>
+
+            </article>
+
+
+            <!-- هدية 3 -->
+
+            <article
+                class="gift-card"
+                data-gift="وقت للرسم"
+                data-icon="🎨"
+            >
+
+                <div class="gift-icon">🎨</div>
+
+                <h3>وقت للرسم</h3>
+
+                <p>
+                    وقت خاص للرسم والإبداع
+                </p>
+
+                <button class="choose-gift-btn">
+                    أختارها 💗
+                </button>
+
+            </article>
+
+
+            <!-- هدية 4 -->
+
+            <article
+                class="gift-card"
+                data-gift="نجمة النشاط"
+                data-icon="🌟"
+            >
+
+                <div class="gift-icon">🌟</div>
+
+                <h3>نجمة النشاط</h3>
+
+                <p>
+                    الحصول على لقب نجمة النشاط
+                </p>
+
+                <button class="choose-gift-btn">
+                    أختارها 💗
+                </button>
+
+            </article>
+
+
+            <!-- هدية 5 -->
+
+            <article
+                class="gift-card"
+                data-gift="نقاط تميز"
+                data-icon="🏆"
+            >
+
+                <div class="gift-icon">🏆</div>
+
+                <h3>نقاط تميز</h3>
+
+                <p>
+                    إضافة نقاط تميز لكِ
+                </p>
+
+                <button class="choose-gift-btn">
+                    أختارها 💗
+                </button>
+
+            </article>
+
+
+            <!-- هدية 6 -->
+
+            <article
+                class="gift-card"
+                data-gift="حصة ترفيهية"
+                data-icon="🎬"
+            >
+
+                <div class="gift-icon">🎬</div>
+
+                <h3>حصة ترفيهية</h3>
+
+                <p>
+                    المشاركة في حصة ترفيهية
+                </p>
+
+                <button class="choose-gift-btn">
+                    أختارها 💗
+                </button>
+
+            </article>
+
+
+            <!-- هدية 7 -->
+
+            <article
+                class="gift-card"
+                data-gift="شهادة متميزة"
+                data-icon="📜"
+            >
+
+                <div class="gift-icon">📜</div>
+
+                <h3>شهادة متميزة</h3>
+
+                <p>
+                    شهادة إلكترونية تقديرًا لتميزك
+                </p>
+
+                <button class="choose-gift-btn">
+                    أختارها 💗
+                </button>
+
+            </article>
+
+
+            <!-- هدية 8 -->
+
+            <article
+                class="gift-card"
+                data-gift="مع صديقتي"
+                data-icon="👭"
+            >
+
+                <div class="gift-icon">👭</div>
+
+                <h3>مع صديقتي</h3>
+
+                <p>
+                    اصطحاب صديقة معك في نشاط ترفيهي
+                </p>
+
+                <button class="choose-gift-btn">
+                    أختارها 💗
+                </button>
+
+            </article>
+
+
+            <!-- هدية 9 -->
+
+            <article
+                class="gift-card"
+                data-gift="اختيار المقطع"
+                data-icon="🎵"
+            >
+
+                <div class="gift-icon">🎵</div>
+
+                <h3>اختيار المقطع</h3>
+
+                <p>
+                    اختيار مقطع مناسب أثناء النشاط
+                </p>
+
+                <button class="choose-gift-btn">
+                    أختارها 💗
+                </button>
+
+            </article>
+
+
+            <!-- هدية 10 -->
+
+            <article
+                class="gift-card"
+                data-gift="أدوات مدرسية لطيفة"
+                data-icon="✏️"
+            >
+
+                <div class="gift-icon">✏️</div>
+
+                <h3>أدوات مدرسية لطيفة</h3>
+
+                <p>
+                    قلم أو دفتر أو ستيكرات
+                </p>
+
+                <button class="choose-gift-btn">
+                    أختارها 💗
+                </button>
+
+            </article>
+
+
+            <!-- هدية 11 -->
+
+            <article
+                class="gift-card"
+                data-gift="قسيمة شرائية"
+                data-icon="🎟️"
+            >
+
+                <div class="gift-icon">🎟️</div>
+
+                <h3>قسيمة شرائية</h3>
+
+                <p>
+                    قسيمة شراء كمكافأة على تميزك
+                </p>
+
+                <button class="choose-gift-btn">
+                    أختارها 💗
+                </button>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         4. نافذة تأكيد الهدية
+    =================================================== -->
+
+    <div id="confirmModal" class="modal">
+
+        <div class="modal-card">
+
+            <div
+                id="confirmGiftIcon"
+                class="confirm-gift-icon"
+            >
+                🎁
+            </div>
+
+            <h2>
+                اختيار جميل! 💗
+            </h2>
+
+            <p>
+                اخترتِ
+            </p>
+
+            <h3 id="confirmGiftName">
+                اسم الهدية
+            </h3>
+
+            <p class="confirm-warning">
+                هل أنتِ متأكدة؟
+                <br>
+                بعد التأكيد سيتم اعتماد اختيارك.
+            </p>
+
+
+            <div class="modal-buttons">
+
+                <button
+                    id="cancelGiftBtn"
+                    class="secondary-btn"
+                >
+                    رجوع
+                </button>
+
+                <button
+                    id="confirmGiftBtn"
+                    class="main-btn"
+                >
+                    نعم، هذه هديتي ⭐
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         5. شاشة الاحتفال بعد اختيار الهدية
+    =================================================== -->
+
+    <section id="celebrationPage" class="page celebration-page">
+
+<!-- الأوراق التحفيزية -->
+
+<div class="motivation-note note-left">
+    <span class="pin">📌</span>
+    <p>
+        مَن تُبدع اليوم<br>
+        تصنع مستقبلًا أجمل
+        <br>♡
+    </p>
+</div>
+
+<div class="motivation-note note-right-top">
+    <span class="pin">📌</span>
+    <p>
+        أنتِ مميزة
+        <br>♡
+    </p>
+</div>
+
+<div class="motivation-note note-right-bottom">
+    <span class="pin">📌</span>
+    <p>
+        استمري في التألق
+        <br>♡
+    </p>
+</div>
+        <!--
+            هنا JavaScript سيضيف المفرقعات
+            والقصاصات الورقية المتحركة
+        -->
+
+        <div
+            id="confettiContainer"
+            class="confetti-container"
+        ></div>
+
+
+        <div class="celebration-card">
+
+            <div class="celebration-stars">
+                ✨ ⭐ ✨
+            </div>
+
+            <h1>
+                مبروك! 💗
+            </h1>
+
+            <h2>
+                لقد اخترتِ هديتك بنجاح
+            </h2>
+
+
+            <div class="selected-gift-box">
+
+                <div
+                    id="celebrationGiftIcon"
+                    class="big-gift-icon"
+                >
+                    🎁
+                </div>
+
+                <h2 id="celebrationGiftName">
+                    هديتك
+                </h2>
+
+                <p>
+                    استمتعي بمكافأتك 💛
+                </p>
+
+            </div>
+
+
+            <p class="motivation-text">
+                مجهودك يستحق كل هذا وأكثر 💗
+            </p>
+
+
+            <p class="student-result">
+
+                <span id="celebrationStudentName"></span>
+
+                <br>
+
+                <small id="celebrationStudentClass"></small>
+
+            </p>
+
+
+            <button
+                id="finishBtn"
+                class="main-btn"
+            >
+                إنهاء 🏠
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         6. صفحة سبق اختيار الهدية
+    =================================================== -->
+
+    <section id="alreadyChosenPage" class="page">
+
+        <div class="already-card">
+
+            <div class="big-star">
+                ⭐
+            </div>
+
+            <h1>
+                هديتك محفوظة 💗
+            </h1>
+
+            <p>
+                سبق واخترتِ هديتك من هذا الجهاز
+            </p>
+
+
+            <div class="previous-gift">
+
+                <span id="previousGiftIcon">
+                    🎁
+                </span>
+
+                <h2 id="previousGiftName">
+                    الهدية
+                </h2>
+
+            </div>
+
+
+            <p>
+                نتمنى لكِ يومًا جميلًا ✨
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         7. تسجيل دخول المشرفة
+    =================================================== -->
+
+    <section id="adminLoginPage" class="page">
+
+        <div class="admin-login-card">
+
+            <div class="lock-icon">
+                🔐
+            </div>
+
+            <h2>
+                دخول المشرفة
+            </h2>
+
+            <p>
+                هذه الصفحة مخصصة للمشرفة فقط
+            </p>
+
+
+            <div class="input-group">
+
+                <label for="adminUsername">
+                    اسم المستخدم
+                </label>
+
+                <input
+                    type="text"
+                    id="adminUsername"
+                    placeholder="اسم المستخدم"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="adminPassword">
+                    كلمة المرور
+                </label>
+
+                <input
+                    type="password"
+                    id="adminPassword"
+                    placeholder="••••••••"
+                >
+
+            </div>
+
+
+            <p
+                id="adminLoginError"
+                class="error-message"
+            ></p>
+
+
+            <button
+                id="adminLoginBtn"
+                class="main-btn"
+            >
+                دخول
+            </button>
+
+
+            <button
+                class="back-btn"
+                data-page="welcomePage"
+            >
+                رجوع
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         8. لوحة المشرفة
+    =================================================== -->
+
+    <section id="adminDashboardPage" class="page admin-page">
+
+        <header class="admin-header">
+
+            <div>
+
+                <h1>
+                    ⭐ لوحة المشرفة
+                </h1>
+
+                <p>
+                    متجر نجوم النشاط
+                </p>
+
+            </div>
+
+<div class="admin-actions">
+
+    <button
+        id="newCompetitionBtn"
+        class="new-competition-btn"
+    >
+        🔄 بدء مسابقة جديدة
+    </button>
+
+    <button
+        id="adminLogoutBtn"
+        class="logout-btn"
+    >
+        تسجيل الخروج
+    </button>
+
+</div>
+        </header>
+
+
+
+        <!-- الإحصائيات -->
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                <span>
+                    إجمالي الاختيارات
+                </span>
+
+                <strong id="totalChoices">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>
+                    الطالبات
+                </span>
+
+                <strong id="totalStudents">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card warning-stat">
+
+                <span>
+                    تكرار محتمل
+                </span>
+
+                <strong id="duplicateCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- أدوات البحث -->
+
+        <div class="dashboard-tools">
+
+            <input
+                type="search"
+                id="studentSearch"
+                placeholder="🔎 ابحثي باسم الطالبة..."
+            >
+
+            <select id="classFilter">
+
+                <option value="">
+                    جميع الفصول
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <!-- جدول النتائج -->
+
+        <div class="table-wrapper">
+
+            <table id="choicesTable">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            #
+                        </th>
+
+                        <th>
+                            اسم الطالبة
+                        </th>
+
+                        <th>
+                            الفصل
+                        </th>
+
+                        <th>
+                            الهدية
+                        </th>
+
+                        <th>
+                            الحالة
+                        </th>
+
+                        <th>
+                            التاريخ
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="choicesTableBody">
+
+                    <!--
+                        JavaScript سيضع
+                        اختيارات الطالبات هنا
+                    -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div
+            id="emptyDashboard"
+            class="empty-dashboard"
+        >
+
+            <div>
+                🎁
+            </div>
+
+            <h3>
+                لا توجد اختيارات حتى الآن
+            </h3>
+
+            <p>
+                ستظهر اختيارات الطالبات هنا تلقائيًا.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         JavaScript
+    =================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
