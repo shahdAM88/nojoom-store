@@ -1617,16 +1617,16 @@ button {
 }
 
 .wave-1 {
-    left: -250px;
-    top: 20%;
+    left: -330px;
+    top: 5%;
     animation: waveMove 9s ease-in-out infinite alternate;
 }
 
 .wave-2 {
-    right: -280px;
-    bottom: 5%;
-    width: 500px;
-    height: 500px;
+    right: -300px;
+    bottom: 10%;
+    width: 520px;
+    height: 420px;
     animation: waveMove 12s ease-in-out infinite alternate-reverse;
 }
 
@@ -1709,4 +1709,47 @@ button {
     .school-intro p {
         font-size: 12px !important;
     }
+}
+/* نجوم إضافية */
+
+.star-5 {
+    top: 10%;
+    left: 30%;
+    font-size: 13px;
+    animation-delay: .7s;
+}
+
+.star-6 {
+    top: 45%;
+    left: 5%;
+    font-size: 18px;
+    animation-delay: 1.5s;
+}
+
+.star-7 {
+    top: 65%;
+    right: 7%;
+    font-size: 12px;
+    animation-delay: 2.2s;
+}
+
+.star-8 {
+    bottom: 8%;
+    left: 35%;
+    font-size: 16px;
+    animation-delay: 1.2s;
+}
+
+.star-9 {
+    top: 22%;
+    right: 28%;
+    font-size: 11px;
+    animation-delay: 2.8s;
+}
+
+.star-10 {
+    bottom: 30%;
+    right: 25%;
+    font-size: 14px;
+    animation-delay: .3s;
 }
