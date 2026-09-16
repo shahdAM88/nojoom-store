@@ -154,25 +154,52 @@ goToStoreBtn.addEventListener("click", () => {
 
 
     if (name.length < 3) {
+    studentError.textContent =
+        "اكتبي اسمك بشكل كامل ✨";
+    return;
+}
 
-        studentError.textContent =
-            "اكتبي اسمك بشكل كامل ✨";
+studentError.textContent = "";
 
-        return;
-    }
-
-
-    studentError.textContent = "";
-
-    studentName = name;
-    studentClass = className;
+studentName = name;
+studentClass = className;
 
 
-    document.getElementById("displayStudentName")
-        .textContent = studentName;
+/* التحقق هل الطالبة اختارت في المسابقة الحالية */
+
+const previousChoice = choices.find(choice => {
+
+    return (
+        normalizeText(choice.name) === normalizeText(studentName) &&
+        normalizeText(choice.className) === normalizeText(studentClass)
+    );
+
+});
 
 
-    showPage("storePage");
+if (previousChoice) {
+
+    document.getElementById(
+        "previousGiftName"
+    ).textContent = previousChoice.gift;
+
+    document.getElementById(
+        "previousGiftIcon"
+    ).textContent = previousChoice.icon;
+
+    showPage("alreadyChosenPage");
+
+    return;
+}
+
+
+/* لم تختر من قبل */
+
+document.getElementById(
+    "displayStudentName"
+).textContent = studentName;
+
+showPage("storePage");
 
 });
 
@@ -996,5 +1023,23 @@ newCompetitionBtn.addEventListener("click", () => {
 
     // تحديث لوحة المشرفة
     loadDashboard();
+
+});
+/* =========================================
+   الرجوع للصفحة الرئيسية
+========================================= */
+
+const backToHomeBtn =
+    document.getElementById("backToHomeBtn");
+
+backToHomeBtn.addEventListener("click", () => {
+
+    // نفرغ بيانات الطالبة من الخانات فقط
+    studentNameInput.value = "";
+    studentClassInput.value = "";
+    studentError.textContent = "";
+
+    // نرجع للهوم
+    showPage("welcomePage");
 
 });
