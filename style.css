@@ -1513,3 +1513,200 @@ button {
 .home-gift-btn:hover .home-arrow {
     transform: translateX(-4px);
 }
+/* =========================================
+   ديباجة المدرسة
+========================================= */
+
+.school-header {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    z-index: 100;
+}
+
+/* الشعار */
+.school-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.school-brand img {
+    width: 48px !important;
+    height: auto !important;
+    display: block;
+    object-fit: contain;
+}
+
+/* الخط بين الشعار والكلام */
+.header-divider {
+    width: 1px;
+    height: 38px;
+    background: rgba(70, 85, 120, 0.25);
+    border-radius: 10px;
+}
+
+/* النص */
+.school-intro {
+    text-align: right;
+    line-height: 1.4;
+}
+
+.school-intro h2 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #43517a;
+}
+
+.school-intro p {
+    margin: 3px 0 0;
+    font-size: 10px;
+    color: #8b8fa3;
+}
+
+/* الجوال */
+@media (max-width: 600px) {
+
+    .school-header {
+        top: 12px;
+        right: 12px;
+        gap: 7px;
+    }
+
+    .school-brand img {
+        width: 38px !important;
+    }
+
+    .header-divider {
+        height: 30px;
+    }
+
+    .school-intro h2 {
+        font-size: 11px;
+    }
+
+    .school-intro p {
+        font-size: 8px;
+    }
+}
+/* =========================================
+   الأمواج والنجوم المتحركة
+========================================= */
+
+.page-decorations {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* الأمواج */
+.wave {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border: 2px solid rgba(126, 142, 200, 0.16);
+    border-radius: 45%;
+}
+
+.wave-1 {
+    left: -250px;
+    top: 20%;
+    animation: waveMove 9s ease-in-out infinite alternate;
+}
+
+.wave-2 {
+    right: -280px;
+    bottom: 5%;
+    width: 500px;
+    height: 500px;
+    animation: waveMove 12s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes waveMove {
+    from {
+        transform: rotate(0deg) translateY(0);
+    }
+
+    to {
+        transform: rotate(18deg) translateY(-25px);
+    }
+}
+
+
+/* النجوم */
+.floating-star {
+    position: absolute;
+    color: rgba(235, 190, 65, 0.55);
+    animation: starFloat 4s ease-in-out infinite alternate;
+}
+
+.star-1 {
+    top: 15%;
+    left: 8%;
+    font-size: 22px;
+}
+
+.star-2 {
+    top: 30%;
+    right: 8%;
+    font-size: 16px;
+    animation-delay: 1s;
+}
+
+.star-3 {
+    bottom: 18%;
+    left: 12%;
+    font-size: 14px;
+    animation-delay: 2s;
+}
+
+.star-4 {
+    bottom: 10%;
+    right: 15%;
+    font-size: 20px;
+    animation-delay: .5s;
+}
+
+@keyframes starFloat {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: .35;
+    }
+
+    to {
+        transform: translateY(-18px) rotate(15deg);
+        opacity: .9;
+    }
+}
+
+/* نخلي محتوى الموقع فوق الزخارف */
+.school-header,
+.page {
+    position: relative;
+    z-index: 1;
+}
+/* تكبير نص الديباجة فقط */
+.school-intro h2 {
+    font-size: 18px !important;
+}
+
+.school-intro p {
+    font-size: 14px !important;
+}
+@media (max-width: 600px) {
+    .school-intro h2 {
+        font-size: 16px !important;
+    }
+
+    .school-intro p {
+        font-size: 12px !important;
+    }
+}
