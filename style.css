@@ -1419,3 +1419,42 @@ button {
     }
 
 }
+/* =========================================
+   شعار المدرسة
+========================================= */
+
+.school-logo {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+
+    z-index: 100;
+
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.school-logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    display: block;
+}
+
+/* الجوال */
+@media (max-width: 768px) {
+
+    .school-logo {
+        top: 12px;
+        right: 12px;
+
+        width: 65px;
+        height: 65px;
+    }
+
+}
