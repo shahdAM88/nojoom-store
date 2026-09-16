@@ -1615,28 +1615,63 @@ button {
     border: 2px solid rgba(126, 142, 200, 0.16);
     border-radius: 45%;
 }
+/* =========================================
+   الأمواج العلوية
+========================================= */
 
+.wave {
+    position: fixed;
+    top: 70px;
+    left: -5%;
+    width: 110%;
+    height: 90px;
+
+    border: none;
+    border-top: 2px solid rgba(95, 145, 205, 0.35);
+    border-radius: 50%;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* الموجة الأولى */
 .wave-1 {
-    left: -330px;
-    top: 5%;
-    animation: waveMove 9s ease-in-out infinite alternate;
+    top: 75px;
+    transform: rotate(-2deg);
+    animation: waveFloat1 6s ease-in-out infinite alternate;
 }
 
+/* الموجة الثانية */
 .wave-2 {
-    right: -300px;
-    bottom: 10%;
-    width: 520px;
-    height: 420px;
-    animation: waveMove 12s ease-in-out infinite alternate-reverse;
+    top: 95px;
+    left: -10%;
+    width: 120%;
+
+    border-top: 1.5px solid rgba(95, 145, 205, 0.20);
+
+    transform: rotate(2deg);
+    animation: waveFloat2 8s ease-in-out infinite alternate;
 }
 
-@keyframes waveMove {
+
+/* حركة خفيفة جدًا */
+@keyframes waveFloat1 {
     from {
-        transform: rotate(0deg) translateY(0);
+        transform: translateX(-15px) rotate(-2deg);
     }
 
     to {
-        transform: rotate(18deg) translateY(-25px);
+        transform: translateX(15px) rotate(1deg);
+    }
+}
+
+@keyframes waveFloat2 {
+    from {
+        transform: translateX(15px) rotate(2deg);
+    }
+
+    to {
+        transform: translateX(-15px) rotate(-1deg);
     }
 }
 
