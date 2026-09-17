@@ -2123,55 +2123,65 @@ button {
         font-size: 21px;
     }
 }
-/* =========================================
-   إصلاح شكل الهيدر على التابلت / iPad
-========================================= */
+/* ===============================
+   iPad / Tablet
+================================ */
 
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1024px) {
 
     .school-header {
-        width: 92%;
-        max-width: 850px;
-        margin: 25px auto 20px;
-        padding: 18px 25px;
+        position: absolute !important;
+        top: 18px !important;
+        right: 22px !important;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
+        width: auto !important;
+        max-width: 520px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 10px !important;
     }
 
     .school-brand {
-        flex: 0 0 auto;
+        flex: 0 0 55px !important;
+        width: 55px !important;
+        height: auto !important;
     }
 
     .school-brand img {
-        width: 110px !important;
-        height: 110px !important;
-        max-width: 110px !important;
-        object-fit: contain;
+        display: block !important;
+        width: 55px !important;
+        height: auto !important;
+        max-width: 55px !important;
+        max-height: 70px !important;
+        object-fit: contain !important;
     }
 
     .header-divider {
-        width: 1px;
-        height: 90px;
-        flex-shrink: 0;
+        width: 1px !important;
+        height: 42px !important;
+        flex: 0 0 1px !important;
     }
 
     .school-intro {
-        width: auto;
-        max-width: 430px;
-        text-align: right;
+        width: 300px !important;
+        max-width: 300px !important;
+        flex: 0 0 300px !important;
+        text-align: right !important;
     }
 
     .school-intro h2 {
-        font-size: 22px;
-        margin: 0 0 6px;
+        font-size: 15px !important;
+        margin: 0 0 3px !important;
+        line-height: 1.3 !important;
     }
 
     .school-intro p {
-        font-size: 14px;
-        line-height: 1.7;
-        margin: 0;
+        font-size: 10px !important;
+        line-height: 1.6 !important;
+        margin: 0 !important;
     }
 }
