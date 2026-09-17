@@ -2123,3 +2123,55 @@ button {
         font-size: 21px;
     }
 }
+/* =========================================
+   إصلاح شكل الهيدر على التابلت / iPad
+========================================= */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    .school-header {
+        width: 92%;
+        max-width: 850px;
+        margin: 25px auto 20px;
+        padding: 18px 25px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .school-brand {
+        flex: 0 0 auto;
+    }
+
+    .school-brand img {
+        width: 110px !important;
+        height: 110px !important;
+        max-width: 110px !important;
+        object-fit: contain;
+    }
+
+    .header-divider {
+        width: 1px;
+        height: 90px;
+        flex-shrink: 0;
+    }
+
+    .school-intro {
+        width: auto;
+        max-width: 430px;
+        text-align: right;
+    }
+
+    .school-intro h2 {
+        font-size: 22px;
+        margin: 0 0 6px;
+    }
+
+    .school-intro p {
+        font-size: 14px;
+        line-height: 1.7;
+        margin: 0;
+    }
+}
